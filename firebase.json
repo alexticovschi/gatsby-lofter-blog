@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gatsby-lofter-blog",
+  "private_key_id": "70f54f1ab33d881b56439acee7d89c7e13f5c7d3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDbm6QTTBgnVbbx\nJDbZefWvocIJeb9ecwsMyhwFL4K4vPAuNSLU2dOjaTaKH2y24QSfkdyHkZT8tRS8\nWXhaTQjQ1SKtImbqqErQbXWKUZ8KOTgYEucy/rD8+aAa/9UpTdMi8fuzM004vXix\n3DV/TNS+KXOMAaL0AXSQEhhfAdMhO5SQ1wS7GTCNCUT1w1MtSTzbifqPTaYKezEq\nBDTcIGRqAQF1qkkVvZngYmOITBjPNGM+DZqe8s6Zej/didaaRwjXF98Vw0vTYEpG\nJf1Ls0qxnb6rTvKCzOYzXppFUNvASVk880f2od6iZsNypG+0xNc8sTTSIshgRTDa\nbZaWl0YHAgMBAAECggEAAcOl1Uvas9Ix9oz6bdPXf/I2O1pBidI1yAQFppsDm1VV\nPqHJplkbpKfvOrvW5T84iMmksmgegMs5n+u+FkehJwBXV3m7xu3UMAl5FMPkGbJs\n+3CHb/bw2A9vVFgyz7Ki3BiCk6V5XNfU1OT2fw/Qc7ikh37p3rj2RUQH8xdyKUWr\n9BBOPBJxhkIAJJAV19Zl/MjwW5wYIqcPUIC+qkNkqFtMCOvWmMDGyaTWgG4pwnYf\nXErsx6F7GuGI4VsU/752RQSbmUBYku0txsn2yu18rLhY5AHIpXQpsAg1YIUHwlY/\nn8dBNgBoWZgBhfBq+q8zWPYd9V9DGgdo6k8CXkUE4QKBgQDuxuQX2Snu/uLHt9oL\nwhFZuM+Xhxx57k7iP1A3Ycbmu8Rn7H4LQ+Yoe8/ti7a6OnhOaI1hU2ayH5KYLRIj\ndpoIvNQJTQgZF0TEjvV/+K6BDirHHwgCchBSfZYs5wWWsXKZcE4gHiPS2HdYxZlI\nHTBQIq2Skllp4Theul4+AY2xJwKBgQDrcsmxnzwIkYqzbPbwa9SJ0sdyFNt6B6gR\n3U2OnRYvwyqpeazXLklxrLdX8/6LvWRnSosg9N8kUrIK7vdn27uUp9FFcTyeydeY\nNT/EH5XgojkNQY5WyZjFNfR5qAC9tSAwWTl2AQjv1HWPK33x0GGzg0zZr0TiXbzc\n9Y0xjFcQIQKBgCdLQcQO79Ctz2IwhkiDElniiP8VtAD4z7B53NiQVawo4ER97awq\n61hkL66W3GY/MwcsO3/1uqO7gGNcn2yImwavFHHHZHrEkoOKRypdIVKJo06Lc8T7\nQmZg1nLjPc8zunk3uxOcAiczikholDYC362AV3IUdXRwJNep8dJgbRHnAoGABf4R\n7Bdla8JoiVCIqG3WJvvaX6jwPRbczDeZtbuByQ1qlI2oPIHNFLuUnwRywhO77nUT\nPW9+DmqcZXLXkSkiiRIMXXwYUuJIPnN8f/1dzy3RzeiROtw+qyZIZqBEBJALla9v\nqvUzyQbbRx2QQwtOsUbyOcggNLK2D9mgElbEEIECgYEAyIyXect47Wnp4+OGa19/\nkVPYLxjbQrRVFYIK4zyi1G+Vz9YymGCg+G7UWG8rPFqzaq3FMSiaTEhE679PFI6b\nrXcOvqD7c4AYvFmvOSIPhhoJloXJ0BAMIRxzO1xC7sQKbIvORKdVhCX9GjdK3dl+\naQrpSmCXBIQQvXVlzWwIPFo=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-952zb@gatsby-lofter-blog.iam.gserviceaccount.com",
+  "client_id": "106888500813689466763",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-952zb%40gatsby-lofter-blog.iam.gserviceaccount.com"
+}
