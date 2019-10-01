@@ -7,7 +7,7 @@ exports.createPages = ({
   const {
     createPage
   } = actions;
-  const articleTemplate = path.resolve('src/templates/articleTemplate.js');
+  const articleTemplate = path.resolve('src/templates/articleTemplate.jsx');
   
   return graphql(`
     {
