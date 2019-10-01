@@ -15,6 +15,7 @@ const IndexPage = props => {
           <div>
             {article.node.summary}
           </div>
+          <Link to={`/article/${article.node.id}`}>Read More</Link>
         </div>
       ))}
     </Layout>
