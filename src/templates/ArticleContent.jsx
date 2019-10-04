@@ -3,11 +3,12 @@ import Layout from "../components/layout"
 
 import "./articleContent.scss"
 
-const ArticleTemplate = props => {
-  const { title, author, content } = props.pageContext
+const ArticleContent = props => {
+  const { title, author, content, imgUrl } = props.pageContext
   return (
     <Layout>
       <section className="article">
+        <img src={imgUrl} />
         <h2>
           {title} - <small>{author.name}</small>
         </h2>
@@ -17,4 +18,4 @@ const ArticleTemplate = props => {
   )
 }
 
-export default ArticleTemplate
+export default ArticleContent

@@ -18,6 +18,7 @@ const IndexPage = props => {
           {allArticle.edges.map(article => (
             <article key={article.node.id} className="articles__article-item">
               <Article
+                imgUrl={article.node.imgUrl}
                 title={article.node.title}
                 name={article.node.author.name}
                 summary={article.node.summary}
@@ -39,6 +40,7 @@ export const query = graphql`
           summary
           title
           content
+          imgUrl
           id
           author {
             name

@@ -16,6 +16,7 @@ module.exports = {
             map: doc => ({
               title: doc.title,
               summary: doc.summary,
+              imgUrl: doc.imgUrl,
               content: doc.content,
               author___NODE: doc.author.id
             })
