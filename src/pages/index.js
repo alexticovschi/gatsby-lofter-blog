@@ -22,8 +22,8 @@ const IndexPage = props => {
                 title={article.node.title}
                 name={article.node.author.name}
                 summary={article.node.summary}
+                articleId={article.node.id}
               />
-              <Link to={`/article/${article.node.id}`} className="link-btn">Read More</Link>
             </article>
           ))}
         </div>

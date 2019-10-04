@@ -12,21 +12,10 @@
         background-color: rgb(245, 250, 253);
         border: .1rem solid rgb(224, 224, 224);
         border-radius: 1rem;
-        padding: 1rem;
-    }
+        padding: 1.2rem;
 
-
-}
-
-.link-btn {
-    padding: .6rem 2rem;
-    border: .1rem solid rgb(150, 236, 217);
-    color: #333;
-    border-radius: .7rem;
-    text-decoration: none;
-    transition: .4s;
-
-    &:hover {
-        background-color: rgb(150, 236, 217);
+        @media(max-width: 500px) {
+            padding: .6rem;
+        }
     }
 }

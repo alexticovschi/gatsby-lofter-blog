@@ -8,11 +8,13 @@ const ArticleContent = props => {
   return (
     <Layout>
       <section className="article">
-        <img src={imgUrl} />
-        <h2>
-          {title} - <small>{author.name}</small>
-        </h2>
-        <p>{content}</p>
+        <img src={imgUrl} className="article__img" />
+        <div className="article__content">
+          <h2>
+            {title} - <small>{author.name}</small>
+          </h2>
+          <p>{content}</p>
+        </div>
       </section>
     </Layout>
   )
