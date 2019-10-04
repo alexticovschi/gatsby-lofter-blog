@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 // import Image from "../components/image"
@@ -18,7 +18,7 @@ const IndexPage = props => {
           {allArticle.edges.map(article => (
             <article key={article.node.id} className="articles__article-item">
               <Article
-                imgUrl={article.node.localImage.publicURL}
+                imgUrl={article.node.localImage.childImageSharp.fixed}
                 title={article.node.title}
                 name={article.node.author.name}
                 summary={article.node.summary}
@@ -41,7 +41,11 @@ export const query = graphql`
           title
           content
           localImage {
-            publicURL
+            childImageSharp {
+              fluid(maxWidth: 500){
+                ...GatsbyImageSharpFluid
+              }
+            }
           }
           id
           author {

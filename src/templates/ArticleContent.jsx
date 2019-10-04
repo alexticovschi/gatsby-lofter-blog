@@ -1,14 +1,15 @@
 import React from "react"
 import Layout from "../components/layout"
+import Img from "gatsby-image"
 
 import "./articleContent.scss"
 
 const ArticleContent = props => {
-  const { title, author, content, localImage } = props.pageContext
+  const { title, author, content, localImage } = props.pageContext;
   return (
     <Layout>
       <section className="article">
-        <img src={localImage.publicURL} className="article__img" />
+        <Img src={localImage.childImageSharp.fixed} className="article__img" />
         <div className="article__content">
           <h2>
             {title} - <small>{author.name}</small>

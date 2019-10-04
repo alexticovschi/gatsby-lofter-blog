@@ -57,7 +57,7 @@ module.exports = {
       resolve: `gatsby-plugin-remote-images`,
       options: {
         nodeType: 'Article',
-        imagePath: 'imageUrl',
+        imagePath: 'imgUrl',
       },
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality

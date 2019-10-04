@@ -1,12 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 import "./article.scss"
 
 const Article = ({ title, name, summary, imgUrl, articleId }) => {
+  console.log(imgUrl)
   return (
     <section className="article-sum">
-      <img src={imgUrl} className="article-sum__img" />
+      <Img fluid={imgUrl} className="article-sum__img" />
 
       <div className="article-sum__summary">
         <h2 className="article-sum__title">

@@ -18,7 +18,11 @@ exports.createPages = ({
               title
               content
               localImage {
-                publicURL
+                childImageSharp {
+                  fluid(maxWidth: 500){
+                    src
+                  }
+                }
               }
               id
               author {
