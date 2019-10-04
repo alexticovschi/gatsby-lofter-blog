@@ -7,27 +7,14 @@ exports.createPages = ({
   const {
     createPage
   } = actions;
-  const articleTemplate = path.resolve('src/templates/ArticleContent.jsx');
+  const ArticleContent = path.resolve('src/templates/ArticleContent.jsx');
 
   return graphql(`
     {
         allArticle {
           edges {
             node {
-              summary
-              title
-              content
-              localImage {
-                childImageSharp {
-                  fluid(maxWidth: 500){
-                    src
-                  }
-                }
-              }
               id
-              author {
-                name
-              }
             }
           }
         }
@@ -40,8 +27,8 @@ exports.createPages = ({
     result.data.allArticle.edges.forEach(article => {
       createPage({
         path: `/article/${article.node.id}`,
-        component: articleTemplate,
-        context: article.node
+        component: ArticleContent,
+        context: { articleId: article.node.id }
       })
     })
   })

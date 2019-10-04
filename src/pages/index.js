@@ -18,7 +18,7 @@ const IndexPage = props => {
           {allArticle.edges.map(article => (
             <article key={article.node.id} className="articles__article-item">
               <Article
-                imgUrl={article.node.localImage.childImageSharp.fixed}
+                imgUrl={article.node.localImage.childImageSharp.fluid}
                 title={article.node.title}
                 name={article.node.author.name}
                 summary={article.node.summary}

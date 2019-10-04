@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 import "./article.scss"
 
 const Article = ({ title, name, summary, imgUrl, articleId }) => {
-  console.log(imgUrl)
   return (
     <section className="article-sum">
       <Img fluid={imgUrl} className="article-sum__img" />
