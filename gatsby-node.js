@@ -17,7 +17,9 @@ exports.createPages = ({
               summary
               title
               content
-              imgUrl
+              localImage {
+                publicURL
+              }
               id
               author {
                 name

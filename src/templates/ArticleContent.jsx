@@ -4,11 +4,11 @@ import Layout from "../components/layout"
 import "./articleContent.scss"
 
 const ArticleContent = props => {
-  const { title, author, content, imgUrl } = props.pageContext
+  const { title, author, content, localImage } = props.pageContext
   return (
     <Layout>
       <section className="article">
-        <img src={imgUrl} className="article__img" />
+        <img src={localImage.publicURL} className="article__img" />
         <div className="article__content">
           <h2>
             {title} - <small>{author.name}</small>
