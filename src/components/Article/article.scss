@@ -1,0 +1,7 @@
+.article {
+    grid-column: center-start / center-end;
+
+    @media(max-width: 1200px) {
+        grid-column: full-start / full-end;
+    }
+}

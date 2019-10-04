@@ -5,19 +5,28 @@ import Layout from "../components/layout"
 // import Image from "../components/image"
 // import SEO from "../components/seo"
 
+import Article from "../components/Article/Article"
+
+import "./index.scss"
+
 const IndexPage = props => {
-  const { allArticle } = props.data;
+  const { allArticle } = props.data
   return (
     <Layout>
-      {allArticle.edges.map(article => (
-        <div key={article.node.id}>
-          <h2> {article.node.title} - <small>{article.node.author.name}</small></h2>
-          <div>
-            {article.node.summary}
-          </div>
-          <Link to={`/article/${article.node.id}`}>Read More</Link>
+      <section className="articles">
+        <div className="articles__wrapper">
+          {allArticle.edges.map(article => (
+            <article key={article.node.id} className="articles__article-item">
+              <Article
+                title={article.node.title}
+                name={article.node.author.name}
+                summary={article.node.summary}
+              />
+              <Link to={`/article/${article.node.id}`} className="link-btn">Read More</Link>
+            </article>
+          ))}
         </div>
-      ))}
+      </section>
     </Layout>
   )
 }
@@ -29,6 +38,7 @@ export const query = graphql`
         node {
           summary
           title
+          content
           id
           author {
             name
