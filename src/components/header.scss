@@ -1,0 +1,32 @@
+.login {
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        transition: .4s;
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(226, 223, 223);
+        }
+    }
+}
+
+
+.logout {
+    margin: auto 0;
+
+    &__wrapper {
+        text-align: right;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #fff;
+        transition: .4s;
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(226, 223, 223);
+        }
+    }
+}
