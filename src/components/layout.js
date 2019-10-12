@@ -8,11 +8,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import {FirebaseContext, useAuth} from "./Firebase";
 
 import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  const {user, firebase, loading} = useAuth();
+
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +27,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <FirebaseContext.Provider value={{user, firebase, loading}}>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -36,7 +39,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
       </div>
-    </>
+    </FirebaseContext.Provider>
   )
 }
 

@@ -1,4 +1,7 @@
-import { useEffect, useState } from "react"
+import {
+    useEffect,
+    useState
+} from "react"
 import getFirebaseInstance from "./firebase"
 import loadFirebaseDependencies from "./loadFirebaseDependencies"
 
@@ -8,61 +11,64 @@ function useAuth() {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+        let unmounted = false
         let unsubscribe
         let publicProfileUnsubscribe
 
-        loadFirebaseDependencies.then(app => {
-            const firebaseInstance = getFirebaseInstance(app)
-            setFirebase(firebaseInstance)
+        if (!unmounted) {
+            loadFirebaseDependencies.then(app => {
+                const firebaseInstance = getFirebaseInstance(app)
+                setFirebase(firebaseInstance)
 
-            unsubscribe = firebaseInstance.auth.onAuthStateChanged(userResult => {
-                if (userResult) {
-                    setUser(userResult);
-                    // get user custom claims
-                    /*setLoading(true);
-                    Promise.all([
-                        firebaseInstance.getUserProfile({ userId: userResult.uid }),
-                        firebaseInstance.auth.currentUser.getIdTokenResult(true),
-                    ]).then((result) => {
-                        const publicProfileResult = result[0]
-                        const token = result[1]
+                unsubscribe = firebaseInstance.auth.onAuthStateChanged(userResult => {
+                    if (userResult) {
+                        setUser(userResult);
+                        // get user custom claims
+                        /*setLoading(true);
+                        Promise.all([
+                            firebaseInstance.getUserProfile({ userId: userResult.uid }),
+                            firebaseInstance.auth.currentUser.getIdTokenResult(true),
+                        ]).then((result) => {
+                            const publicProfileResult = result[0]
+                            const token = result[1]
 
-                        if (publicProfileResult.empty) {
-                            publicProfileUnsubscribe = firebaseInstance.db
-                              .collection("publicProfiles")
-                              .where("userId", "==", userResult.uid)
-                              .onSnapshot((snapshot) => {
-                                  const publicProfileDoc = snapshot.docs[0]
-                                  if (publicProfileDoc && publicProfileDoc.id) {
-                                      setUser({
-                                          ...userResult,
-                                          admin: token.claims.admin,
-                                          username: publicProfileDoc.id,
-                                      })
-                                  }
+                            if (publicProfileResult.empty) {
+                                publicProfileUnsubscribe = firebaseInstance.db
+                                  .collection("publicProfiles")
+                                  .where("userId", "==", userResult.uid)
+                                  .onSnapshot((snapshot) => {
+                                      const publicProfileDoc = snapshot.docs[0]
+                                      if (publicProfileDoc && publicProfileDoc.id) {
+                                          setUser({
+                                              ...userResult,
+                                              admin: token.claims.admin,
+                                              username: publicProfileDoc.id,
+                                          })
+                                      }
 
-                                  setLoading(false)
-                              })
-                        } else {
-                            const publicProfileDoc = publicProfileResult.docs[0]
-                            if (publicProfileDoc && publicProfileDoc.id) {
-                                setUser({
-                                    ...userResult,
-                                    admin: token.claims.admin,
-                                    username: publicProfileDoc.id,
-                                })
+                                      setLoading(false)
+                                  })
+                            } else {
+                                const publicProfileDoc = publicProfileResult.docs[0]
+                                if (publicProfileDoc && publicProfileDoc.id) {
+                                    setUser({
+                                        ...userResult,
+                                        admin: token.claims.admin,
+                                        username: publicProfileDoc.id,
+                                    })
+                                }
+
+                                setLoading(false)
                             }
+                        })*/
+                    } else {
+                        setUser(null);
+                    }
 
-                            setLoading(false)
-                        }
-                    })*/
-                }else{
-                    setUser(null);
-                }
-
-                setLoading(false);
+                    setLoading(false);
+                })
             })
-        })
+        }
 
         return () => {
             if (unsubscribe) {
@@ -75,7 +81,11 @@ function useAuth() {
         }
     }, [])
 
-    return { user, firebase, loading }
+    return {
+        user,
+        firebase,
+        loading
+    }
 }
 
 export default useAuth
