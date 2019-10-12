@@ -44,9 +44,9 @@ const Header = ({ siteTitle }) => {
             <div>
               Hello, {user.email}
               <div className="logout__wrapper">
-                <div className="logout__link" onClick={handleLogout}>
+                <span className="logout__link" onClick={handleLogout}>
                   Logout
-                </div>
+                </span>
               </div>
             </div>
           }

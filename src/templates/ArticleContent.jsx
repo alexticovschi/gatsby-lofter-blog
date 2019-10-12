@@ -1,5 +1,4 @@
 import React from "react"
-import Layout from "../components/layout"
 import Img from "gatsby-image"
 import { graphql } from "gatsby"
 
@@ -9,7 +8,7 @@ const ArticleContent = props => {
   console.log(props.data)
   const { title, author, content, localImage } = props.data.article
   return (
-    <Layout>
+    <section>
       <section className="article">
         <Img
           fluid={localImage.childImageSharp.fluid}
@@ -22,7 +21,7 @@ const ArticleContent = props => {
           <p>{content}</p>
         </div>
       </section>
-    </Layout>
+    </section>
   )
 }
 

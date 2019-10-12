@@ -1,10 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
-
 import Article from "../components/Article/Article"
 
 import "./index.scss"
@@ -12,7 +8,7 @@ import "./index.scss"
 const IndexPage = props => {
   const { allArticle } = props.data
   return (
-    <Layout>
+    <section>
       <section className="articles">
         <div className="articles__wrapper">
           {allArticle.edges.map(article => (
@@ -28,7 +24,7 @@ const IndexPage = props => {
           ))}
         </div>
       </section>
-    </Layout>
+    </section>
   )
 }
 
